@@ -1,6 +1,6 @@
 package com.carloscardona.microservices.hystrix;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
@@ -13,14 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.carloscardona.microservices.hystrix.stream.MockStreamServlet;
 
-/**
- * Created by sgibb on 7/11/14.
- */
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
 @Controller
+@ComponentScan
+@Configuration
 @EnableHystrixDashboard
+@SpringBootApplication
 public class HystrixDashboardApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/")
