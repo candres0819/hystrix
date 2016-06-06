@@ -1,6 +1,7 @@
+server:
+  port: 7979
 spring:
   application:
     name: hystrixdashboard
-  cloud:
-    config:
-      uri: ${vcap.services.${PREFIX:}configserver.credentials.uri:http://user:password@localhost:8888}  
+  config:
+    name: hystrixdashboard
